@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, red, yellow);
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Makes it a circle */
+  object-fit: cover;  /* Ensures the image fills the circle */
+  margin-bottom: 10px;
+}
+
+header h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+}
+
+header p {
+  color: #34495e;
+  font-size: 1.1em;
+}
+
+.form-section h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input, form select {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #1abc9c;
+}
+
+#successMessage {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+}

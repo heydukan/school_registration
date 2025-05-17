@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="school-logo.png" alt="School Logo" class="logo" />
+      <h1>Bright Future School</h1>
+      <p>Welcome to our student registration portal</p>
+    </header>
+
+    <section class="form-section">
+      <h2>Registration Form</h2>
+      <form id="registrationForm">
+        <label>Full Name:</label>
+        <input type="text" placeholder="Enter full name" required />
+
+        <label>Age:</label>
+        <input type="number" placeholder="Enter age" required />
+
+        <label>Class:</label>
+        <select required>
+          <option value="">Choose Class</option>
+          <option>Grade 1</option>
+          <option>Grade 2</option>
+          <option>Grade 3</option>
+          <option>Grade 4</option>
+        </select>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter email" required />
+
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="Enter phone number" required />
+
+        <button type="submit">Register</button>
+      </form>
+      <p id="successMessage" class="hidden">Registration Successful! Thank you.</p>
+    </section>
+  </div>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      successMessage.classList.remove('hidden');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
